@@ -1,0 +1,30 @@
+{
+  "name": "yt-notes",
+  "version": "0.2.0",
+  "description": "Take notes beside the current YouTube video with autosave, timestamps, and Markdown export.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marvinvista/yt-notes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/marvinvista/yt-notes/issues"
+  },
+  "homepage": "https://github.com/marvinvista/yt-notes#readme",
+  "keywords": [
+    "chrome-extension",
+    "youtube",
+    "notes",
+    "side-panel",
+    "markdown"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "node --test && node scripts/validate-extension.mjs",
+    "build:icons": "python3 scripts/generate_icons.py",
+    "package": "npm run build:icons && node scripts/build-package.mjs"
+  }
+}

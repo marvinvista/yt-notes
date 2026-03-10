@@ -1,0 +1,36 @@
+name: Bug report
+description: Report a broken behavior in the extension.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Describe the bug and what you expected instead.
+      placeholder: The side panel opened, but the saved note did not load for the current video.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Share the smallest reproducible path.
+      placeholder: |
+        1. Open a YouTube watch page
+        2. Open the extension
+        3. Type a note
+        4. Refresh the tab
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+      placeholder: Chrome 136 on macOS 15
+  - type: textarea
+    id: notes
+    attributes:
+      label: Extra context
+      description: Add screenshots, console errors, or anything else helpful.

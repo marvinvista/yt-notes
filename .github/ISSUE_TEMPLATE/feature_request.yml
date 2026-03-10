@@ -1,0 +1,25 @@
+name: Feature request
+description: Suggest an improvement to the note-taking workflow.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you trying to solve?
+      placeholder: I want to reorganize notes more easily when reviewing a long video.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you like to happen?
+      placeholder: Add a lightweight way to collapse sections in the note editor.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Optional. Share any workarounds or different ideas you considered.

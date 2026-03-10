@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>YT Notes</title>
+    <link rel="stylesheet" href="./panel.css" />
+  </head>
+  <body>
+    <main class="panel-shell">
+      <section class="workspace">
+        <div class="video-header">
+          <h2 id="video-title">No active video</h2>
+        </div>
+        <section class="notes-view">
+          <textarea
+            id="note-editor"
+            class="note-editor"
+            spellcheck="true"
+          ></textarea>
+        </section>
+        <div class="status-row">
+          <span class="save-state" id="save-state">Nothing to save yet.</span>
+        </div>
+        <section class="actions" id="actions">
+          <button class="action-button" id="export-markdown" type="button">Export</button>
+        </section>
+      </section>
+    </main>
+
+    <script type="module" src="./panel.js"></script>
+  </body>
+  </html>

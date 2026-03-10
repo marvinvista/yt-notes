@@ -1,0 +1,140 @@
+:root {
+  color-scheme: light dark;
+  --paper: #ffffff;
+  --ink: #1f2430;
+  --muted: #7a7f89;
+  --line: rgba(15, 23, 42, 0.08);
+  --button: #152238;
+  --button-text: #fff8ed;
+  --shadow: 0 10px 20px -16px rgba(16, 30, 53, 0.8);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #10161d;
+    --ink: #eef2f7;
+    --muted: #a4afbb;
+    --line: rgba(226, 232, 240, 0.14);
+    --button: #eef2f7;
+    --button-text: #10161d;
+    --shadow: 0 14px 28px -22px rgba(0, 0, 0, 0.9);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Roboto, Arial, sans-serif;
+  overflow: hidden;
+}
+
+button,
+textarea {
+  font: inherit;
+}
+
+.panel-shell {
+  height: 100vh;
+  padding: 14px 14px 12px;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr);
+  background: var(--paper);
+}
+
+.workspace {
+  min-height: 0;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto auto;
+  gap: 10px;
+}
+
+h2 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+}
+
+.video-header {
+  display: grid;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+}
+
+.notes-view {
+  display: grid;
+  min-height: 0;
+}
+
+.note-editor {
+  width: 100%;
+  min-height: 0;
+  height: 100%;
+  resize: none;
+  padding: 2px 0 0;
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.9;
+  outline: none;
+  border: 0;
+  box-shadow: none;
+  background: transparent;
+}
+
+.save-state {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.status-row {
+  display: flex;
+  justify-content: flex-end;
+  min-height: 16px;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 8px;
+  padding-top: 2px;
+}
+
+.action-button {
+  appearance: none;
+  border: 0;
+  border-radius: 999px;
+  background: var(--button);
+  color: var(--button-text);
+  font-size: 13px;
+  font-weight: 700;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
+  box-shadow: var(--shadow);
+}
+
+.action-button:hover {
+  transform: translateY(-1px);
+}
+
+.action-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
